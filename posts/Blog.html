@@ -45,11 +45,52 @@
             <div>
               <h2>Java Applet</h2>
               <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum
-                est saepe odio architecto eveniet accusamus, voluptates iusto
-                aspernatur veritatis praesentium dolorum odit, quo obcaecati
-                corrupti placeat. Natus id autem dolorum?
+                Java applets are pretty old school now and not widely used
+                anymore because modern web technology like html, css, js has
+                taken over, but backen in those days , appplets in java were
+                used as a key tool for creative a interactive web projects
               </p>
+
+              <h3> sample code</h3>
+              <p>
+                <details>
+                  <summary>click to view code</summary>
+                <code>
+                  import java.applet.Applet;<br>
+                  import javat.awt.Graphics;<br><br>
+                  public class HelloWordApplet extends Applet{<br>
+                    &nbsp;&nbsp;public void paint(Graphics g){<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;g.drawString("Hello world", 20, 20)<br>
+                  &nbsp;  }<br>
+                  }
+                </code>
+                </details>
+                <h3>What's the process ?</h3>
+                <ol type="1">
+                  <li><b>java.applet.Applet</b> is the base cass for creating applet,
+                    and the <b>java.awt.Graphics</b> is the class that provides context for drawing on the applet
+                  </li>
+                  <li>
+                    we created the  class <b>HelloWordApplet</b> class which extends the Applet class
+                  </li>
+                  <li>paint method is used to drawing purposes</li>
+                  <li>Graphics class drawstring is used to draw string on cooridanate (20,20)</li>
+
+                </ol><br>
+
+                in order to run this applet , we hvae to create html and link it thee using applet tag like this <br>
+                <details>
+                  <summary>click to view code</summary>
+                  <code>
+                    &lt;applet code = "HelloWordApplet"&gt;<br>
+                    &lt;/applet&gt;
+                  </code>
+                </details>
+              </p>
+              this create a simple canvas like design that displays string hellow world.
+
+              <h3>How to run?</h3>
+              <p>just compile the java code and openup that html where u used the applet,keep in note, ue interent explorer like no chromium browers  to see changes as other chromimum based brower aint be supporting it </p>
             </div>
           </li>
 
