@@ -30,7 +30,7 @@
         <li><a href="#p1">Java Applet</a></li>
         <li><a href="#p2">What is CORS?</a></li>
         <li>
-          <a href="#p3">How to host your custom domain of github pages?</a>
+          <a href="#p3">What is Phising attack?</a>
         </li>
       </ul>
     </section>
@@ -40,7 +40,8 @@
       <section id="blog-posts">
         <h1>Blog Posts</h1>
         <ul class="blogl">
-          <!-- #jaba applet -->
+          
+          <!-- #java applet -->
           <li id="p1">
             <div>
               <h2>Java Applet</h2>
@@ -99,23 +100,122 @@
             <div>
               <h2>CORS</h2>
               <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum
-                est saepe odio architecto eveniet accusamus, voluptates iusto
-                aspernatur veritatis praesentium dolorum odit, quo obcaecati
-                corrupti placeat. Natus id autem dolorum?
+               CORS [Cross Origin REsources Sharing], is like a secutiy guard for a web browser
+               which decides wheather a web page can request resources from a diff domain than one it came from 
+               it basically allows servers who can access their resources and how, this helps prevent security issues like data theft,
+               or unauthorized access
+              </p>
+              <h3>How to enable CORS?</h3>
+              <p>
+                lets take a custum python backend framework, flask, thier is 
+                <code>flask-cors</code> package which u can install via
+                <code> pip install flask-cors</code>
+                <details>
+                  <summary>backend code </summary>
+                  <code>
+                    from flask import Flask<br>
+                    from flask_cors import CORS<br>
+                    <br>
+                    app = Flask(__name__)<br>
+                    CORS(app)<br>
+                    <br>
+                    @app.route('/')<br>
+                    def hello_world():<br>
+                    &nbsp;&nbsp;return 'hello, cors!'<br>
+                   <br>
+                    if __name__ == '__main__'<br>
+                    &nbsp;&nbsp;app.run(debug=True)
+                </code>
+                <br><br>            
+                <small>this enables CORS for all routes</small>                
+              </details> 
+            </p>
+            <h3>accessing in frontweb</h3>
+            <p>
+              make sure u have Axios installed or install it via 
+              <code>nom install axios</code> which helps to make route requests to backend server<br><br>
+              so lets say u have it installe dnad in a react exmaple.tsx, u create a component to send req, which should look like this while sending request
+              <details>
+                <summary>VIEW CODE</summary>
+                <code>axios.get('api route for server')<br>
+                  &nbsp;&nbsp;.then(reposnse => {
+                    <br>
+                    &nbsp;&nbsp; //whatever logic u want it
+                    <br>
+                    &nbsp;&nbsp;}<br>
+                    )
+                  </code>
+                </details>  
               </p>
             </div>
           </li>
-          <!-- #safallama.com.np -->
+          
+          <!-- How a fishing attack is performed -->
           <li id="p3">
             <div>
-              <h2>Hosting your custom domain</h2>
+              <h2>What is Phising attack ?</h2>
               <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum,
-                aliquam ab itaque, eaque placeat deserunt aspernatur corporis
-                sint, enim ducimus dicta natus odit non. Adipisci dolor delectus
-                temporibus quasi culpa?
+                A Phising attack is a cybercrime which tries to steal your personal information
+                 by pretending to be someone you trust, solely focusing on tricking peoples 
+                 into giving thier sensetive information like passwords, credit details and others
               </p>
+              <h3>How is it performed?</h3>
+              <p>generally Phising attack means to replicate same
+                structure but in a malicious factor, their are various way, hackers devlop their 
+                own code forms  and send to thier victims, or their are various tools available like z-phisher,
+            
+
+                <ul>
+                  <li>
+                    first of all a usual hacker or any scammer develops thier own looking social login form or replica or use pre built tools like <a href="https://github.com/htr-tech/zphisher">Z-Phisher</a>
+                  </li>
+                  <li>they host their masked malicious site to any other platform and they would have pre bult databse connected to it, so basically whatevyer u enter thinking it real site, eveything is kept tracked and logged
+                   by the attacker
+                  </li>
+                </ul>
+              <br>
+              <div>
+                here is the stepwise procedure how they pullit off:
+     <ol type="1">
+      <li>
+        This is the interfact of <b>zphisher</b>,showcasing all the credential forms it replcates:
+        <br>
+        <img src="../assets/phish_awarness/dash.png" alt="z-phisher dashboard">
+      </li>
+      <li>
+        suppose an attacker targets a user to steal its facebook credentials, in this sceneratio the attacker would generate a corresponding login form , in this case its 1;
+        <br>
+        <img src="../assets/phish_awarness/networktunnels.png" alt="tunnels">
+        <br>
+      various hosting options are provided such as local enviroment, exposing locales to ineternet and others, lets assume attacker choses local for now 
+      </li>
+      <li>once the attacker opts to run the phising page locally, the tool displays port which it being hosted on <br>
+        <img src="../assets/phish_awarness/hostedlocal.png" alt="local running">
+      </li>
+      <li>
+the attacker can now share the live phising page link with target , sinceits exact copy of real page, victim wont notice anything, upon visiting, victim ip is captures as defualt;
+<br>
+<img src="../assets/phish_awarness/facebookreplicalive.png" alt="facebook page replicated">
+      </li>
+      <li>
+        believing the page to be legit, the victim enter his credential details and after victim enters login, evey data will be forwareded to attacker database
+        <br>
+        <img src="../assets/phish_awarness/usercredentering.png" alt="enteirng random pass">
+        <br>
+        <img src="../assets/phish_awarness/dbforwarding.png" alt="captured data">
+      </li>
+     </ol>
+     <h3>How to get aware of this?</h3>
+     <ol type="i">
+      <li>verify URLS</li>
+      <li>Avoid clicks</li>
+      <li>Secure connections</li>
+      <li>educate yourself</li>
+      <li>use mfa layers on your social site</li>
+     </ol>
+              </div>
+              </p>
+
             </div>
           </li>
         </ul>
