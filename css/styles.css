@@ -283,6 +283,101 @@ about-section */
   margin-right: 10px;
 }
 
+@media (max-width: 991px) and (min-width: 768px) {
+  #about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #ffffff;
+    color: #333;
+  }
+
+  .toppa {
+    text-align: center;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  .toppa h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+  }
+
+  .toppa p {
+    font-size: 1rem;
+    color: #666;
+  }
+
+  .about-img {
+    width: 40%; /* Made the image slightly smaller */
+    margin-bottom: 20px;
+  }
+
+  .about-img img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .section-cont {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px;
+  }
+
+  .exp,
+  .edu {
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    width: 48%; /* Reduced width for side-by-side layout */
+  }
+
+  .exp h3,
+  .edu h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 6px;
+  }
+
+  .exp img,
+  .edu img {
+    width: 18px;
+    vertical-align: middle;
+    margin-right: 8px;
+  }
+
+  .exp ul,
+  .edu ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 8px;
+  }
+
+  .exp li,
+  .edu li {
+    font-size: 0.95rem;
+    margin-bottom: 6px;
+    color: #555;
+  }
+
+  .exp li:before,
+  .edu li:before {
+    content: "+";
+    color: black;
+    margin-right: 6px;
+  }
+}
+
 /* 
 skill section */
 #skills {
