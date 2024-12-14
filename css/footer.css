@@ -1,0 +1,16 @@
+footer {
+  background-color: rgb(255, 255, 255);
+  color: black;
+  padding: 10px 500px;
+  text-align: center;
+  font-size: large;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+footer .tel {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}

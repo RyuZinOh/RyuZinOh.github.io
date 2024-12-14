@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>safal lama - portfolio</title>
     <link rel="icon" href="assets/Icon.png" type="image/png" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
     <!-- header -->
@@ -12,10 +15,12 @@
       <div class="navbuttop">
         <nav>
           <img src="assets/Icon.png" alt="logo" id="logo" />
-          <a href="#home">Home</a>
-          <a href="#about">About</a>
-          <a href="#skills">Skills</a>
-          <a href="#projects">Projects</a>
+          <div class="suparight">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+          </div>
         </nav>
       </div>
       <div class="nav-but-below">
@@ -27,24 +32,36 @@
     </header>
     <!-- hero section -->
     <section id="home">
-      <img src="assets/profile-pic.png" alt="profile picture of safal lama" />
-      <p>Hello, I'm</p>
-      <h1>Safal</h1>
-      <p>Cyber SEcurity Enthusiast</p>
-      <p>
-        <a href="http://safallama.com.np"><button>Discover</button></a>
-        <a href="#"><button>Resume</button></a>
-      </p>
-      <p>
-        <a href="#contact">Contact</a>
-      </p>
-      <a href="https://www.linkedin.com/in/safal-lama-379738330/">
-        <img src="assets/linkedin.png" alt="linkedin" />
-      </a>
-
-      <a href="https://guthub.com/ryuzinoh">
-        <img src="assets/github.png" alt="github" />
-      </a>
+      <div class="one">
+        <div class="img-cont">
+          <div class="sideimg">
+            <img
+              src="assets/profile-pic.png"
+              alt="profile picture of safal lama"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="anotherone">
+        <p class="a">Hello, I'm</p>
+        <h1 class="b">Safal</h1>
+        <p class="c">Cyber SEcurity Enthusiast</p>
+        <p>
+          <a href="http://safallama.com.np"><button>Discover</button></a>
+          <a href="#"><button>Resume</button></a>
+        </p>
+        <p>
+          <a href="#contact" class="cont">Contact</a>
+        </p>
+        <div class="links">
+          <a href="https://www.linkedin.com/in/safal-lama-379738330/">
+            <img src="assets/linkedin.png" alt="linkedin" />
+          </a>
+          <a href="https://guthub.com/ryuzinoh">
+            <img src="assets/github.png" alt="github" />
+          </a>
+        </div>
+      </div>
     </section>
 
     <!--  About section-->
@@ -254,12 +271,14 @@
             ><img src="assets/x.png" alt="X"
           /></a>
           <p>
+           <p>
             yoyuehappy@gmail.com
+           </p>
             <a href="mailto:yoyuehappy@gmail.com">
               <img src="assets/email.png" alt="email" />
             </a>
           </p>
-          <a href="tel:+9779814202188">+977 9814202188</a>
+          <a class="tel" href="tel:+9779814202188">+977 9814202188</a>
         </div>
       </div>
     </footer>
