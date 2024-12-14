@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/footer.css" />
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   </head>
   <body>
     <!-- header -->
@@ -22,13 +23,16 @@
             <a href="#projects">Projects</a>
           </div>
         </nav>
-      </div>
-      <div class="nav-but-below">
-        <a href="posts/Collaborations">Labs</a>
-        <a href="posts/Blog">Blogs</a>
-        <a href="posts/Timespace">TimeSpace</a>
-        <a href="posts/Interests">Interests</a>
-      </div>
+        <div class="nav-but-below">
+          <ul class="ul">
+            <li class="li"><a href="posts/Collaborations"><i class="fa fa-flask"></i></a></li>
+            <li class="li"><a href="posts/Blog"><i class="fa fa-blog"></i></a></li>
+            <li class="li"><a href="posts/Timespace"><i class="fa fa-clock"></i></a></li>
+            <li class="li"><a href="posts/Interests"><i class="fa fa-heart"></i></a></li>
+          </ul>
+        </div>
+        
+      
     </header>
     <!-- hero section -->
     <section id="home">
@@ -204,11 +208,11 @@
         <h3>Serena</h3>
         <img src="assets/serena.png" alt="Saman" />
         <p>
-          <a href="https://github.com/RyuZinOh/serena-FRONTEND">
+          <a 
+          href="https://github.com/RyuZinOh/serena-FRONTEND">
             <button>FrontEnd Documentation</button> </a
-          ><br />
-
-          <a href="https://github.com/RyuZinOh/serena-BACKEND-">
+           ><br />
+          <a  href="https://github.com/RyuZinOh/serena-BACKEND-">
             <button>BackEnd Documentation</button>
           </a>
         </p>
@@ -219,8 +223,7 @@
     <section id="contact">
       <form action="">
         <h2>Contact</h2>
-        <fieldset>
-          <legend>Contact Me</legend>
+      
           <!-- name -->
           <div>
             <label for="name">Full Name</label>
@@ -273,7 +276,6 @@
           <div>
             <button type="submit">Submit</button>
           </div>
-        </fieldset>
       </form>
     </section>
 
