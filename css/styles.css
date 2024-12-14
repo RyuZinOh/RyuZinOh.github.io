@@ -121,7 +121,7 @@ herosection */
   padding-left: 5px;
 }
 /* 
-tablemode home */
+tablemode hero*/
 @media (max-width: 991px) and (min-width: 768px) {
   #home {
     flex-direction: row;
@@ -193,6 +193,8 @@ tablemode home */
     padding-left: 5px;
   }
 }
+
+
 
 /* 
 about-section */
@@ -282,7 +284,7 @@ about-section */
   color: black;
   margin-right: 10px;
 }
-
+/* about tablet mode */
 @media (max-width: 991px) and (min-width: 768px) {
   #about {
     display: flex;
@@ -313,7 +315,7 @@ about-section */
   }
 
   .about-img {
-    width: 40%; /* Made the image slightly smaller */
+    width: 40%;
     margin-bottom: 20px;
   }
 
@@ -336,7 +338,7 @@ about-section */
     padding: 10px;
     margin-bottom: 15px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-    width: 48%; /* Reduced width for side-by-side layout */
+    width: 48%; 
   }
 
   .exp h3,
@@ -377,6 +379,8 @@ about-section */
     margin-right: 6px;
   }
 }
+
+
 
 /* 
 skill section */
@@ -449,7 +453,7 @@ skill section */
   color: #00aaff;
   cursor: pointer;
 }
-
+/* skills-tabletmode */
 @media (max-width: 991px) and (min-width: 768px) {
   #skills {
     background-color: #ffffff;
@@ -585,7 +589,7 @@ projectssection */
 #projects .except img {
   margin-top: 50px;
 }
-
+/* project tabletmode */
 @media (max-width: 991px) and (min-width: 768px) {
   #projects {
     padding: 20px;
@@ -649,6 +653,8 @@ projectssection */
     margin-top: 50px;
   }
 }
+
+
 
 /* 
 contactform section */
@@ -731,7 +737,8 @@ button:hover {
   box-shadow: rgba(0, 0, 0, 0.2) 0px 15px 25px -15px;
   transform: translateY(-5px);
 }
-
+/* 
+contacttabletmode */
 @media (max-width: 991px) and (min-width: 768px) {
   #contact {
     padding: 15px;
