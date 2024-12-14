@@ -90,3 +90,161 @@ herosection */
 
 /* 
 about-section */
+#about {
+  display: flex;
+  padding: 80px 20px;
+  background-color: #ffffff;
+  color: #333;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.toppa {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.toppa h2 {
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.toppa p {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.about-img {
+  width: 40%;
+  padding-right: 40px;
+}
+
+.about-img img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.section-cont {
+  width: 55%;
+}
+
+.exp,
+.edu {
+  border-radius: 8px;
+  padding: 25px;
+  margin-bottom: 30px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.exp h3,
+.edu h3 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 10px;
+}
+
+.exp img,
+.edu img {
+  width: 30px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.exp ul,
+.edu ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 15px;
+}
+
+.exp li,
+.edu li {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  color: #555;
+}
+
+.exp li:before,
+.edu li:before {
+  content: "+";
+  color: black;
+  margin-right: 10px;
+}
+
+/* 
+skill section */
+#skills {
+  background-color: #ffffff;
+  padding: 40px;
+}
+
+.skills-H h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.skills-cat {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.cate {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  flex: 1 1 300px;
+  max-width: 300px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.cate:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cate h3 {
+  font-size: 2rem;
+  color: #444;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #f0f0f0;
+  display: inline-block;
+}
+
+.cate ol {
+  padding-left: 20px;
+  color: #666;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.cate ol li {
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.cate ol li ul {
+  padding-left: 20px;
+  margin-top: 5px;
+}
+
+.cate ol li ul li {
+  list-style-type: square;
+  color: #555;
+}
+
+.cate ol li:hover {
+  color: #00aaff;
+  cursor: pointer;
+}

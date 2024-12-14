@@ -26,12 +26,11 @@ nav a {
   text-decoration: none;
   padding: 0.5rem;
   font-size: 2rem;
-  transition: transform 0.3s ease;
+  transition: color 0.3s ease;
 }
 
 nav a:hover {
-  color: rgb(66, 130, 109);
-  transform: scale(1.1);
+  color: #00aaff;
 }
 
 .toc {

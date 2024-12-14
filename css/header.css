@@ -35,7 +35,7 @@ header {
 }
 
 .navbuttop nav a:hover {
-  color: rgb(66, 130, 109);
+  color: #00aaff;
 }
 
 #logo {
@@ -55,5 +55,5 @@ header {
 }
 
 .nav-but-below a:hover {
-  color: rgb(66, 130, 109);
+  color: #00aaff;
 }
