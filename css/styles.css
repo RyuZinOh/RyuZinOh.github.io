@@ -120,77 +120,46 @@ herosection */
 #home .anotherone .links a {
   padding-left: 5px;
 }
-/* 
-tablemode hero*/
-@media (max-width: 991px) and (min-width: 768px) {
+/* responsiveness */
+@media (max-width: 768px) {
   #home {
-    flex-direction: row;
-    align-items: center;
-    height: auto;
-    padding: 20px;
-  }
-
-  #home .img-cont {
-    width: 250px;
-    height: 250px;
-    margin-right: 400px;
-    margin-left: 100px;
-  }
-
-  #home .sideimg img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  #home .one {
-    margin-left: 0;
-    margin-top: 0;
-    flex-grow: 1;
-    text-align: left;
-  }
-
-  #home .anotherone {
-    display: flex;
     flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    max-width: 150%;
-    margin-left: -100px;
   }
-
+  #home .anotherone {
+    margin-right: 0;
+    max-width: 100%;
+    text-align: center;
+  }
   #home .anotherone .a {
-    font-size: 20px;
-    color: #333;
+    font-size: 30px;
   }
 
   #home .anotherone .b {
-    font-size: 75px;
-    font-weight: bold;
-    color: #222;
+    font-size: 40px;
+    margin-top: -20px;
   }
 
   #home .anotherone .c {
-    font-style: italic;
     font-size: 14px;
-    color: #777;
+    margin-top: -20px;
   }
 
   #home .anotherone button {
-    padding: 12px 20px;
-    font-size: 1rem;
     width: 100%;
     max-width: 180px;
-    margin-top: 4px;
   }
 
-  #home .anotherone .yes {
-    padding-top: 10px;
-    padding-bottom: 10px;
+  #home .links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 15px;
   }
 
-  #home .anotherone .links a {
-    padding-left: 5px;
+  #home .links a img {
+    width: 30px;
+    height: 30px;
+    margin-top: -20px;
   }
 }
 
@@ -282,103 +251,56 @@ about-section */
   color: black;
   margin-right: 10px;
 }
-/* about tablet mode */
-@media (max-width: 991px) and (min-width: 768px) {
+/* 
+responsivr */
+@media (max-width: 768px) {
   #about {
-    display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 20px;
-    background-color: #ffffff;
-    color: #333;
-  }
-
-  .toppa {
-    text-align: center;
-    margin-bottom: 10px;
-    width: 100%;
-  }
-
-  .toppa h2 {
-    font-size: 1.8rem;
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 8px;
-  }
-
-  .toppa p {
-    font-size: 1rem;
-    color: #666;
+    padding: 40px 20px;
   }
 
   .about-img {
-    width: 40%;
+    width: 100%;
+    padding-right: 0;
     margin-bottom: 20px;
   }
 
-  .about-img img {
-    width: 100%;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  }
-
   .section-cont {
-    display: flex;
-    justify-content: space-between;
     width: 100%;
-    gap: 20px;
   }
 
   .exp,
   .edu {
-    border-radius: 8px;
-    padding: 10px;
-    margin-bottom: 15px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-    width: 48%;
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 20px;
   }
 
   .exp h3,
   .edu h3 {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: #222;
+    font-size: 1.4rem;
     margin-bottom: 10px;
-    border-bottom: 2px solid #f0f0f0;
-    padding-bottom: 6px;
   }
 
   .exp img,
   .edu img {
-    width: 18px;
-    vertical-align: middle;
-    margin-right: 8px;
+    width: 25px;
   }
 
   .exp ul,
   .edu ul {
-    list-style-type: none;
-    padding-left: 0;
-    margin-top: 8px;
+    margin-top: 10px;
   }
 
   .exp li,
   .edu li {
-    font-size: 0.95rem;
-    margin-bottom: 6px;
-    color: #555;
-  }
-
-  .exp li:before,
-  .edu li:before {
-    content: "+";
-    color: black;
-    margin-right: 6px;
+    font-size: 1rem;
   }
 }
 
-/* Skill Section */
+/* 
+skill section */
 #skills {
   background-color: #ffffff;
   padding: 40px;
@@ -448,45 +370,76 @@ about-section */
   color: #00aaff;
   cursor: pointer;
 }
-
-/* Skills - Tablet Mode */
-@media (max-width: 1616px) and (min-width: 768px) {
+/* skills-responsivemode */
+@media (max-width: 768px) {
   #skills {
+    background-color: #ffffff;
     padding: 20px;
   }
 
   .skills-H h2 {
+    text-align: center;
     font-size: 2rem;
+    color: #333;
     margin-bottom: 15px;
+    font-weight: bold;
   }
 
   .skills-cat {
+    display: flex;
+    flex-wrap: wrap;
     gap: 15px;
+    justify-content: center;
   }
 
   .cate {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
     padding: 15px;
     flex: 1 1 250px;
     max-width: 250px;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .cate:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
   }
 
   .cate h3 {
     font-size: 1.5rem;
+    color: #444;
     margin-bottom: 10px;
+    border-bottom: 2px solid #f0f0f0;
+    display: inline-block;
   }
 
   .cate ol {
     padding-left: 15px;
+    color: #666;
     font-size: 0.9rem;
     line-height: 1.6;
   }
 
   .cate ol li {
     margin-bottom: 8px;
+    position: relative;
   }
 
   .cate ol li ul {
     padding-left: 15px;
+    margin-top: 5px;
+  }
+
+  .cate ol li ul li {
+    list-style-type: square;
+    color: #555;
+  }
+
+  .cate ol li:hover {
+    color: #00aaff;
+    cursor: pointer;
   }
 }
 
@@ -553,8 +506,8 @@ projectssection */
 #projects .except img {
   margin-top: 50px;
 }
-/* project tabletmode */
-@media (max-width: 991px) and (min-width: 768px) {
+/* project responivness */
+@media (max-width: 768px)  {
   #projects {
     padding: 20px;
     background-color: white;
@@ -700,7 +653,7 @@ button:hover {
   transform: translateY(-5px);
 }
 /* 
-contacttabletmode */
+contactrespomode */
 @media (max-width: 991px) and (min-width: 768px) {
   #contact {
     padding: 15px;

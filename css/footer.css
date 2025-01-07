@@ -14,25 +14,17 @@ footer .tel {
   color: rgb(0, 0, 0);
   text-decoration: none;
 }
-
 /* 
-footer for tab */
-
-@media (max-width: 991px) and (min-width: 768px) {
+repnsciveness */
+@media (max-width: 768px) {
   footer {
-    background-color: rgb(255, 255, 255);
-    color: black;
-    padding: 10px 200px;
+    padding: 10px 20px;
+    flex-direction: column;
     text-align: center;
     font-size: medium;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-items: center;
   }
 
   footer .tel {
-    color: rgb(0, 0, 0);
-    text-decoration: none;
+    margin-top: 10px;
   }
 }
