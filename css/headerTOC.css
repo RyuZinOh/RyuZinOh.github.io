@@ -1,0 +1,41 @@
+header {
+  background-color: white;
+  color: black;
+  padding: 20px 0;
+  font-family: poppins;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#logo {
+  margin-top: -70px;
+  width: 250px;
+}
+
+nav a {
+  color: black;
+  text-decoration: none;
+  font-size: 40px;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #00aaff;
+}
+
+/* 
+responsiveness */
+
+@media (max-width: 768px) {
+  nav a {
+    font-size: 16px;
+    padding-right: 10px;
+  }
+  #logo {
+    width: 50%;
+    margin-top: -40px;
+  }
+}
