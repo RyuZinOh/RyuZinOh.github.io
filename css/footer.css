@@ -1,6 +1,7 @@
 footer {
-  background-color: rgb(255, 255, 255);
-  color: black;
+  background-color: black;
+  color: white;
+  border-radius: 24px 25px 0 0;
   padding: 10px 500px;
   text-align: center;
   font-size: large;
@@ -10,9 +11,16 @@ footer {
   align-items: center;
 }
 
+footer a {
+  color: white;
+  padding: 8px;
+  font-size: xx-large;
+}
+
 footer .tel {
-  color: rgb(0, 0, 0);
+  color: white;
   text-decoration: none;
+  font-size: medium;
 }
 /* 
 repnsciveness */
