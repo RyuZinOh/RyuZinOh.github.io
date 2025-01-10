@@ -9,14 +9,20 @@ footer {
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: center;
-}
+} 
 
 footer a {
   color: white;
   padding: 8px;
-  font-size: xx-large;
+  font-size: x-large;
 }
 
+
+footer a:hover{
+  color: #00aaff;
+;
+
+}
 footer .tel {
   color: white;
   text-decoration: none;
