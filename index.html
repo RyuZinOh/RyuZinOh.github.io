@@ -39,44 +39,52 @@
       </div>
     </header>
 
-    <!-- Hero section with a call to action and product images showcasing -->
     <section class="hero">
       <div class="left-intro">
         <h2>Exclusive for Nepali Players</h2>
         <p>
-          Explore various Cosmetics to direclty buy and use it in your
-          <a href="https://serenax.vercel.app/">SerenaX</a> using external
-          Nepalease Currency at low Cost and Deals.
+          Explore various Cosmetics to directly buy and use them in your
+          <a href="https://serenax.vercel.app/">SerenaX</a> account using Nepali
+          Currency at low cost and amazing deals.
         </p>
         <button class="explore-btn">Shop Now</button>
-        <button class="work-btn">How it Works</button>
+        <a href="#" class="how-it-works-btn" id="how-it-works-btn"
+          >How It Works</a
+        >
+
+        <!-- Modal Structure -->
+        <div id="how-it-works-modal" class="modal">
+          <div class="modal-content">
+            <h2>How It Works</h2>
+            <p>
+              The process is simple: Link your SerenaX account and make
+              purchases from our store. Your account will be updated
+              automatically when you buy a product.
+            </p>
+            <p>
+              Note: This system is a replacement-based technology. When you buy
+              a new product, it replaces the previous one. Please make sure
+              you're comfortable with this before making a purchase.
+            </p>
+            <button id="close-modal-btn">Close</button>
+          </div>
+        </div>
       </div>
       <div class="right-intro">
         <!-- Product images in frames -->
         <div class="frame1">
-          <img
-            src="https://github.com/RyuZinOh/static-assets/blob/main/Cards/7.jpg?raw=true"
-            class="frame-image"
-            alt="Product 1"
-          />
+          <img src="assets/rias.jpg" class="frame-image" alt="Product 1" />
         </div>
         <div class="frame2">
-          <img
-            src="https://github.com/RyuZinOh/static-assets/blob/main/Cards/2.jpg?raw=true"
-            class="frame-image"
-            alt="Product 2"
-          />
+          <img src="assets/raiden.jpg" class="frame-image" alt="Product 2" />
         </div>
         <div class="frame3">
-          <img
-            src="https://github.com/RyuZinOh/static-assets/blob/main/Cards/3.jpg?raw=true"
-            class="frame-image"
-            alt="Product 3"
-          />
+          <img src="assets/okumura.jpg" class="frame-image" alt="Product 3" />
         </div>
       </div>
     </section>
-
+    <!--     
+featured products -->
     <section class="featured-products">
       <div class="u-container">
         <h2>Featured Products</h2>
@@ -112,6 +120,63 @@
       </div>
     </section>
 
+    <!-- showcasing a demo result when combines with the purchased product  -->
+    <section class="user-showcase">
+      <h2>See the Magic in Action</h2>
+      <p>
+        Check out how this custom SerenaX card perfectly combines with our
+        exclusive products. The result? A one of a kind masterpiece!
+      </p>
+      <div class="showcase-container">
+        <img src="assets/finalProdShowcase.png" alt="Showcase User with
+        Customized Card"
+      </div>
+    </section>
+
+    <!-- 
+    FAQ SECTION -->
+    <section class="faq-section" id="faq">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-container">
+        <div class="faq-item">
+          <button class="faq-question">
+            What is this website about?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              External way to redeem the inApp serenax cards and cosmetics,
+              cards for now
+            </p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            How can I purchase a product?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              To purchase a product, simply click on the "Buy Now" button and
+              follow the instructions to complete the transaction.
+            </p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Is there a refund policy?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              Yes, we offer a 7 day refund policy for all our products. Terms
+              and conditions apply.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer">
       <div class="container">
@@ -119,18 +184,22 @@
           <h3>About</h3>
           <p>
             I'm Safal Lama. I created this online store to offer a wide range of
-            quality products, prioritizing customer satisfaction.
+            quality products, prioritizing customer satisfaction realted to
+            serenax.
           </p>
         </div>
         <div class="footer-section links">
-          <h3>Quick Links</h3>
+          <h3>Notes</h3>
           <ul>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms of Service</a></li>
-            <li><a href="#">Returns & Exchanges</a></li>
-            <li><a href="#">FAQ</a></li>
+            <li><a href="posts/privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="posts/terms-of-service.html">Terms of Service</a></li>
+            <li>
+              <a href="posts/returns-exchanges.html">Returns & Exchanges</a>
+            </li>
+            <li><a href="#faq">FAQ</a></li>
           </ul>
         </div>
+
         <div class="footer-section contact">
           <h3>Contact</h3>
           <p><a href="mailto:yoyuehappy@gmail.com">yoyuehappy@gmail.com</a></p>
@@ -168,5 +237,6 @@
       </div>
     </footer>
   </body>
+  <script src="js/script.js"></script>
   <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
 </html>

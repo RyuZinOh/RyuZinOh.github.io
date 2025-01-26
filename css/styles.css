@@ -57,7 +57,7 @@ upper nav */
 
 .upper-navbar {
   background: var(--primary);
-  padding: 10px 0;
+  padding: 5px 0;
   text-align: center;
   color: var(--white);
 }
@@ -93,6 +93,7 @@ main nav */
   text-decoration: none;
   color: var(--link);
   font-size: var(--font-size-base);
+  position: relative;
   transition: color var(--transition) ease;
 }
 
@@ -102,6 +103,21 @@ main nav */
 
 .nav-links li a:active {
   color: var(--link-active);
+}
+
+.nav-links li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--link-hover);
+  transition: width 0.3s ease;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
 }
 
 .logo {
@@ -150,7 +166,8 @@ hero */
 }
 
 .left-intro .explore-btn:hover,
-.left-intro .work-btn:hover {
+.left-intro .work-btn:hover,
+#how-it-works-btn {
   background-color: var(--secondary);
 }
 
@@ -201,6 +218,104 @@ hero */
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 500px;
+  text-align: center;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  animation: slideUp 0.5s ease;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: var(--btn-padding);
+  background-color: var(--primary);
+  color: var(--white);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: var(--secondary);
+}
+
+#close-modal-btn {
+  background-color: red;
+  transition: border 0.1s ease-in-out;
+}
+
+#close-modal-btn:hover {
+  border: solid var(--text) 2px;
+}
+
+.explore-btn,
+#how-it-works-btn {
+  padding: var(--btn-padding);
+  background-color: var(--primary);
+  color: var(--white);
+  text-decoration: none;
+  font-size: var(--font-size-base);
+  border-radius: 5px;
+  margin-right: 10px;
+  display: inline-block;
+  transition: background-color var(--transition) ease;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.explore-btn:hover,
+#how-it-works-btn:hover {
+  background-color: var(--secondary);
+}
+
+/* Modal animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+  }
+  to {
+    transform: translateY(0);
+  }
 }
 
 /* 
@@ -276,6 +391,189 @@ Feaured-product */
 .product-card .buy-btn:hover {
   background-color: var(--secondary);
 }
+
+/* Showcasing Section */
+.user-showcase {
+  padding: var(--section-padding);
+  text-align: center;
+  background: linear-gradient(135deg, var(--primary) 20%, var(--secondary) 80%);
+  color: var(--white);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.user-showcase::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.1),
+    transparent 70%
+  );
+  animation: rotate-background 8s linear infinite;
+}
+
+@keyframes rotate-background {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.user-showcase h2 {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-bold);
+  margin-bottom: var(--gap);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.user-showcase p {
+  font-size: var(--font-size-md);
+  line-height: 1.8;
+  margin-bottom: var(--gap);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.showcase-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: var(--gap);
+  gap: 20px;
+  position: relative;
+}
+
+.showcase-container img {
+  max-width: 80%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3), 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.showcase-container img:hover {
+  transform: scale(1.15) rotateY(10deg) rotateX(5deg);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4), 0 8px 20px rgba(0, 0, 0, 0.3);
+  filter: brightness(1.1);
+}
+
+.showcase-container img:nth-child(1) {
+  animation: float 3s ease-in-out infinite;
+}
+
+.showcase-container img:nth-child(2) {
+  animation: float 4s ease-in-out infinite;
+}
+
+.showcase-container img:nth-child(3) {
+  animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+/* FAQ Section */
+.faq-section {
+  padding: var(--section-padding);
+  background: var(--white);
+  color: var(--text-dark);
+  border-radius: 20px;
+}
+
+.faq-section h2 {
+  text-align: center;
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--gap-lg);
+  color: var(--primary);
+  text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.faq-item {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.faq-question {
+  width: 100%;
+  text-align: left;
+  padding: 15px 20px;
+  background: var(--secondary-light);
+  font-size: var(--font-size-md);
+  color: var(--text-dark);
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: none;
+  outline: none;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.faq-icon {
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  background: var(--white);
+  padding: 0 20px;
+  font-size: var(--font-size-sm);
+  line-height: 1.6;
+  transition: max-height 0.3s ease;
+}
+
+.faq-answer p {
+  margin: 15px 0;
+}
+
+.faq-answer a {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+.faq-item.open .faq-answer {
+  max-height: 200px;
+}
+
+.faq-item.open .faq-icon {
+  transform: rotate(45deg);
+}
+
 /* 
 Footer */
 .footer {
@@ -340,4 +638,86 @@ Footer */
 
 .footer-section a:hover {
   color: var(--accent);
+}
+
+/* Returns & Exchanges Section, TOS, PRIVACY POLICY */
+.notes {
+  background-color: var(--bg);
+  padding: var(--section-padding);
+  border-radius: 15px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  margin: 40px auto;
+  max-width: 1000px;
+  transition: all 0.3s ease;
+}
+
+.notes:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.notes h1 {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-bold);
+  color: var(--primary);
+  text-align: center;
+  margin-bottom: var(--gap);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.notes p {
+  font-size: var(--font-size-md);
+  color: var(--text-light);
+  line-height: 1.8;
+  margin-bottom: var(--gap);
+  letter-spacing: 0.5px;
+}
+
+.notes h2 {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-bold);
+  color: var(--primary);
+  margin-top: var(--gap);
+  margin-bottom: 10px;
+  text-transform: capitalize;
+}
+
+.notes .note-section {
+  margin-bottom: var(--gap);
+}
+
+.notes .note-section p {
+  font-size: var(--font-size-md);
+  color: var(--text-light);
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+.notes .note-btn {
+  display: inline-block;
+  text-align: center;
+  padding: var(--btn-padding);
+  background-color: var(--primary);
+  color: var(--white);
+  font-size: var(--font-size-sm);
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 15px;
+  width: 180px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.notes .note-btn:hover {
+  background-color: var(--secondary);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.notes .note-btn:active {
+  background-color: var(--primary);
+  transform: translateY(1px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
