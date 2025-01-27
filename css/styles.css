@@ -57,14 +57,12 @@ upper nav */
 
 .upper-navbar {
   background: var(--primary);
-  padding: 5px 0;
   text-align: center;
   color: var(--white);
 }
 
 .upper-navbar-title {
-  font-size: var(--font-size-base);
-  font-weight: var(--font-bold);
+  font-size: var(--font-size-md);
 }
 /* 
 main nav */
@@ -279,8 +277,7 @@ button:hover {
   border: solid var(--text) 2px;
 }
 
-.explore-btn,
-#how-it-works-btn {
+.explore-btn {
   padding: var(--btn-padding);
   background-color: var(--primary);
   color: var(--white);
@@ -294,11 +291,29 @@ button:hover {
   line-height: 1.5;
 }
 
-.explore-btn:hover,
-#how-it-works-btn:hover {
+.explore-btn:hover {
   background-color: var(--secondary);
 }
 
+#how-it-works-btn {
+  padding: var(--btn-padding);
+  background-color: black;
+  color: var(--white);
+  text-decoration: none;
+  font-size: var(--font-size-base);
+  border-radius: 5px;
+  margin-right: 10px;
+  display: inline-block;
+  transition: background-color var(--transition) ease;
+  text-align: center;
+  line-height: 1.5;
+}
+
+#how-it-works-btn:hover {
+  background-color: white;
+  color: black;
+  border: solid black 2px;
+}
 /* Modal animations */
 @keyframes fadeIn {
   from {
