@@ -1,5 +1,5 @@
+/* Primary Colors */
 :root {
-  /* Primary Colors */
   --primary: #3730a3;
   --secondary: #4f46e5;
   --accent: #eeff00;
@@ -348,6 +348,27 @@ Feaured-product */
   color: var(--primary);
 }
 
+/* 
+//products actual */
+.products-container {
+  background-color: #f4f4f4;
+  padding: 40px;
+}
+
+.products-container h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
 .product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -405,6 +426,176 @@ Feaured-product */
 
 .product-card .buy-btn:hover {
   background-color: var(--secondary);
+}
+/* 
+//automata */
+/* General Container */
+.products-container-erm {
+  background-color: white;
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Search Container */
+.search-container {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.search-input-container {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 400px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+  font-size: 16px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px 20px 12px 40px; 
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 25px;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+}
+
+.search-result {
+  display: block;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #666;
+}
+
+/* Product List */
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Product Card */
+.product-card-hover {
+  position: relative;
+  overflow: hidden;
+  flex: 1 1 calc(33.333% - 20px);
+  max-width: calc(33.333% - 20px);
+  background-color: #fff;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.product-card-hover img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  display: block;
+  border-radius: 10px 10px 0 0;
+}
+
+/* Hover Drawer */
+.product-card-hover .hover-drawer {
+  position: absolute;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(5px);
+  padding: 20px;
+  box-sizing: border-box;
+  transition: right 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.product-card-hover:hover .hover-drawer {
+  right: 0;
+}
+
+.product-card-hover .hover-drawer h3 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.product-card-hover .hover-drawer .price {
+  font-size: 16px;
+  color: var(--primary);
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.product-card-hover .hover-drawer .buy-btn-hover {
+  display: block;
+  text-align: center;
+  padding: 10px 20px;
+  background-color: var(--primary);
+  color: white;
+  font-size: 14px;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.product-card-hover .hover-drawer .buy-btn-hover:hover {
+  background-color: var(--secondary);
+  transform: scale(1.05);
+}
+
+/* Pagination Styles */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  gap: 10px;
+}
+
+.pagination button {
+  padding: 10px 15px;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.pagination button:hover {
+  background-color: var(--secondary);
+  transform: translateY(-2px);
+}
+
+.pagination button.active {
+  background-color: var(--secondary);
+  transform: translateY(-2px);
 }
 
 /* Showcasing Section */

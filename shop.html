@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Safal Lama - Online Store for Various Products"
+    />
+    <meta name="keywords" content="store, shop, online, products, Safal Lama" />
+    <meta name="author" content="Safal Lama" />
+
+    <title>Safal Lama Store</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="icon" href="assets/logo.png" type="image/png" />
+  </head>
+  <body>
+    <!-- Upper navbar with the store name -->
+    <div class="upper-navbar">
+      <div class="u-container">
+        <p class="upper-navbar-title">
+          Hit the best Cosmetics Deal for Serena!
+        </p>
+      </div>
+    </div>
+
+    <!-- Main navigation bar -->
+    <header class="navbar">
+      <div class="u-container">
+        <h1 class="logo">Cards Store</h1>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">Linking</a></li>
+            <li><a href="#">Cart</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Products Section -->
+    <div class="products-container-erm">
+      <div class="search-container">
+        <div class="search-input-container">
+          <i class="fa fa-search search-icon"></i>
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Search products..."
+            class="search-input"
+          />
+        </div>
+        <span id="search-result" class="search-result"
+          >Showing all products</span
+        >
+      </div>
+      <div id="product-list" class="product-list"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-section about">
+          <h3>About</h3>
+          <p>
+            I'm Safal Lama. I created this online store to offer a wide range of
+            quality products, prioritizing customer satisfaction realted to
+            serenax.
+          </p>
+        </div>
+        <div class="footer-section links">
+          <h3>Notes</h3>
+          <ul>
+            <li><a href="posts/privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="posts/terms-of-service.html">Terms of Service</a></li>
+            <li>
+              <a href="posts/returns-exchanges.html">Returns & Exchanges</a>
+            </li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section contact">
+          <h3>Contact</h3>
+          <p><a href="mailto:yoyuehappy@gmail.com">yoyuehappy@gmail.com</a></p>
+          <p>+977 9814********</p>
+          <p>Bagmati, Nepal</p>
+        </div>
+        <div class="footer-section social">
+          <h3>Follow</h3>
+          <ul>
+            <li>
+              <a href="https://www.facebook.com/safal.lama.726"
+                ><i class="ph ph-facebook-logo"></i> Facebook</a
+              >
+            </li>
+            <li>
+              <a href="https://www.instagram.com/happillli_/"
+                ><i class="ph ph-instagram-logo"></i> Instagram</a
+              >
+            </li>
+            <li>
+              <a href="https://x.com/yoyuehappy"
+                ><i class="ph ph-twitter-logo"></i> Twitter</a
+              >
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/safal-lama-379738330/"
+                ><i class="ph ph-linkedin-logo"></i> LinkedIn</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Safal Lama. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+  <script src="js/fetchProduct.js"></script>
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+</html>

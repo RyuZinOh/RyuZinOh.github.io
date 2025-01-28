@@ -1,6 +1,4 @@
-//--------------//
 //script for faq opening closing
-//--------------//
 document.querySelectorAll(".faq-question").forEach((question) => {
   question.addEventListener("click", () => {
     const faqItem = question.parentElement;
@@ -15,9 +13,7 @@ document.querySelectorAll(".faq-question").forEach((question) => {
   });
 });
 
-//--------------//
 //model for how it works?
-//--------------//
 const modal = document.getElementById("how-it-works-modal");
 const openModalBtn = document.getElementById("how-it-works-btn");
 const closeModalBtn = document.getElementById("close-modal-btn");
@@ -40,3 +36,6 @@ window.addEventListener("click", (event) => {
     document.body.style.overflow = "auto";
   }
 });
+
+
+
