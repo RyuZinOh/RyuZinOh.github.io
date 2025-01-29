@@ -7,10 +7,13 @@
       name="description"
       content="Safal Lama - Online Store for Various Products"
     />
-    <meta name="keywords" content="store, shop, online, products, Safal Lama" />
+    <meta
+      name="keywords"
+      content="store, shop, online, products, Safal Lama, your cart"
+    />
     <meta name="author" content="Safal Lama" />
 
-    <title>Safal Lama Store</title>
+    <title>Safal Lama Store || carts</title>
     <link rel="stylesheet" href="../css/styles.css" />
     <link
       rel="stylesheet"
@@ -35,32 +38,87 @@
         <nav>
           <ul class="nav-links">
             <li><a href="../index">Home</a></li>
-            <li><a href="#">Shop</a></li>
+            <li><a href="../shop/">Shop</a></li>
             <li><a href="#">Linking</a></li>
-            <li><a href="../cart/">Cart</a></li>
+            <li><a href="#">Cart</a></li>
           </ul>
         </nav>
       </div>
     </header>
 
-    <!-- Products Section -->
-    <div class="products-container-erm">
-      <div class="search-container">
-        <div class="search-input-container">
-          <i class="fa fa-search search-icon"></i>
-          <input
-            type="text"
-            id="search-input"
-            placeholder="Search products..."
-            class="search-input"
-          />
+    <section class="cart">
+      <div class="container">
+        <h2 class="cart-title">Your Cart</h2>
+        <div class="cart-items">
+          <!-- Raiden Card -->
+          <div class="cart-item" data-id="1">
+            <img
+              src="../assets/raiden.jpg"
+              alt="Raiden Card"
+              class="cart-item-img"
+            />
+            <div class="cart-item-details">
+              <h3 class="cart-item-name">Raiden Card</h3>
+              <p class="cart-item-price">
+                <span class="price-value">रु 3,900</span>
+              </p>
+              <div class="cart-item-quantity">
+                <button class="quantity-btn decrease">-</button>
+                <span class="quantity-value">1</span>
+                <button class="quantity-btn increase">+</button>
+              </div>
+            </div>
+            <button class="remove-item">Remove</button>
+          </div>
+
+          <!-- Rias Card -->
+          <div class="cart-item" data-id="2">
+            <img
+              src="../assets/rias.jpg"
+              alt="Rias Card"
+              class="cart-item-img"
+            />
+            <div class="cart-item-details">
+              <h3 class="cart-item-name">Rias Card</h3>
+              <p class="cart-item-price">
+                <span class="price-value">रु 3,300</span>
+              </p>
+              <div class="cart-item-quantity">
+                <button class="quantity-btn decrease">-</button>
+                <span class="quantity-value">1</span>
+                <button class="quantity-btn increase">+</button>
+              </div>
+            </div>
+            <button class="remove-item">Remove</button>
+          </div>
+
+          <!-- Okumura Card -->
+          <div class="cart-item" data-id="3">
+            <img
+              src="../assets/okumura.jpg"
+              alt="Okumura Card"
+              class="cart-item-img"
+            />
+            <div class="cart-item-details">
+              <h3 class="cart-item-name">Okumura Card</h3>
+              <p class="cart-item-price">
+                <span class="price-value">रु 2,600</span>
+              </p>
+              <div class="cart-item-quantity">
+                <button class="quantity-btn decrease">-</button>
+                <span class="quantity-value">1</span>
+                <button class="quantity-btn increase">+</button>
+              </div>
+            </div>
+            <button class="remove-item">Remove</button>
+          </div>
         </div>
-        <span id="search-result" class="search-result"
-          >Showing all products</span
-        >
+        <div class="cart-summary">
+          <p><span class="cart-total-price">रु 9,800</span></p>
+          <button class="checkout-btn">Proceed to Checkout</button>
+        </div>
       </div>
-      <div id="product-list" class="product-list"></div>
-    </div>
+    </section>
 
     <!-- Footer -->
     <footer class="footer">
@@ -122,6 +180,6 @@
       </div>
     </footer>
   </body>
-  <script src="../js/fetchProduct.js"></script>
+  <script src="../js/cartDo.js"></script>
   <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
 </html>

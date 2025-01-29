@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <div class="hover-drawer">
                   <h3>${description}</h3>
                   <p class="price">₹${price}</p>
-                  <a href="#" class="buy-btn-hover">Buy Now</a>
+                  <a href="#" class="buy-btn-hover">Add to cart</a>
                 </div>
               </div>
             `;
